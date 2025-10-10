@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Vina+Sans:wght@400;600;700&family=Bowlby+One&display=swap&family=Nunito:wght@400;600&display=swap');
+
+:root {
+  /* Colores */
+  --black-color: #000000;
+  --white-color: #ffffff;
+
+  --color-bg: #fff2e0;
+  --color-bg-alt: #f8e1c7;
+
+  --color-card-1: #e6cdb6;
+  --color-card-2: #ffd1b3;
+  --color-card-3: #f7b58a;
+
+  --text-color-alt: #a67856;
+  --text-highlight: #eb4a3f;
+  --text-highlight-alt: #ee684c;
+
+  --btn-primary: #ff9b73;
+  --btn-secondary: #779047;
+
+  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+
+  /* Tipografía */
+  --font-h1: 'Vina Sans', sans-serif;
+  --font-h2-h3: 'Bowlby One', sans-serif;
+  --font-body: 'Nunito', sans-serif;
+
+  --h1-size: 2.5rem;
+  --h2-size: 2rem;
+  --h3-size: 1.3rem; 
+  --normal-size: 1rem;
+  --small-size: 0.875rem;
+
+  --font-regular: 400;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+}
+/* Fuente y tamaño h2 */
+h2 {
+  font-family: var(--font-h2-h3);
+  font-size: var(--h2-size);
+}
+.overlay {
+  background: linear-gradient(180deg, rgba(255,235,220,0.4), rgba(145, 121, 113, 0.681));
+}
+/* Fuente y tamaño texto body */
+body{
+    background-color: var(--color-bg);
+    font-family: var(--font-body);
+    font-size: var(--normal-size);
+    color: var(--black-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+.hero-3d {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* ocupa toda la altura de la pantalla */
+  overflow: hidden;
+}
+
+.hero-3d model-viewer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  object-fit: cover;
+  background: linear-gradient(180deg, #ffd6ba 0%, #fff0e6 100%); /* pastel suave */
+}
+
+/* Texto encima */
+.hero-text {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #4b2e05;
+  text-align: center;
+  backdrop-filter: blur(1px);
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #5b3a10;
+}
+/* NavBar */
+.navbar {
+  transition: background-color 0.4s ease;
+}
+.navbar.scrolled {
+  background-color: #e17a52 !important; /*Esto hace que se sobreescriba el html para dejar que se oscuresca el navbar*/
+}
+.navbar .nav-link {
+  color: #fff !important;
+  margin-left: 10px;
+  transition: background-color 0.2 ease;
+}
+.navbar .nav-link:hover {
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 5px;
+}
+.navbar-brand {
+  color: #ffffff;
+}
+
+/*NavBar end*/
+/* FOOTER */
+.custom-footer{
+    background-color: #F8E1C7;
+}
+.footer-icons i {
+  color: #000; 
+  transition: color 0.3s;
+}
+
+.footer-icons i:hover {
+  color: #EE684C;
+}
+
+/* END FOOTER */
