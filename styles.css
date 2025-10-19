@@ -11,7 +11,7 @@
   --color-card-3: #f7b58a;
 
   --text-color-alt: #a67856;
-  --text-highlight: #e18252;
+  --text-highlight: #e17d43;
   --text-highlight-alt: #ee684c;
 
   --btn-primary: #ff9b73;
@@ -40,20 +40,20 @@ h1{
 }
 /* Fuente y tamaño texto body */
 body{
-    background-color: var(--color-bg);
-    font-family: var(--font-body);
-    font-size: var(--normal-size);
-    color: var(--black-color);
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
+  background: linear-gradient(160deg, #f6af80 20%, #ffe1ce 80%, #ffc096 100%); /* pastel suave */
+  font-family: var(--font-body);
+  font-size: var(--normal-size);
+  color: var(--black-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 .hero-3d {
   position: relative;
   width: 100%;
   height: 100vh; /* ocupa toda la altura de la pantalla */
   overflow: hidden;
-   
+  top: -20%; 
 }
 
 .hero-3d img {
@@ -65,7 +65,6 @@ body{
   z-index: 0;
   object-fit: cover;
   transform-origin: center center;
-  background: linear-gradient(180deg, #f6af80 0%, #fff0e6 100%); /* pastel suave */
 }
 
 /* Texto encima */
@@ -77,7 +76,7 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #4b2e05;
+  color: #3f2501;
   text-align: center;
   backdrop-filter: blur(1px);
 }
@@ -93,12 +92,52 @@ body{
   font-weight: 400;
   color: #5b3a10;
 }
-/* NavBar */
-.navbar {
-  transition: background-color 0.4s ease;
+.container-nosotros{
+  background-color: #ffffff2b;
+  box-shadow: 0px 4px 30px #25222074;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
 }
-.navbar.scrolled {
-  background-color: var(--text-highlight) !important; /*Esto hace que se sobreescriba el html para dejar que se oscuresca el navbar*/
+
+.nosotros-card{
+  position: relative;
+  background-color: rgba(255, 233, 214, 0.959);
+  box-shadow: 5px 5px 10px #00000043;
+  border-radius: 50px;
+  margin: 10px;
+  padding: 20px;
+  transition: ease 0.3s;
+  overflow: hidden;
+}
+.nosotros-card::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #ff7b5a, #ffce5a);
+  border-top-left-radius: 50px;
+  z-index: 1;
+}
+
+.nosotros-card:hover{
+  box-shadow: 5px 5px 10px #e187437c;
+  transform: translateY(-15px);
+}
+.nosotros-img{
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+  border-radius: 200px;
+  
+}
+/* NavBar */
+.logo{
+  width: 100%;
+  height: auto;
+  max-width: 30px;
+  margin-right: 9px;
 }
 .navbar .nav-link {
   color: #fff !important;
@@ -112,19 +151,37 @@ body{
 .navbar-brand {
   color: #ffffff;
 }
+.btn-orange{
+  background: linear-gradient(160deg, #f59541, #ff8640);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 30px;
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+}
+.btn-orange:hover{
+   transform: scale(1.04);
+}
+.btn-beige{
+  background: linear-gradient(160deg, #fff0d9, #ffd7b4);
+  color: black;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 30px;
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+}
+.btn-beige:hover{
+transform: scale(1.04);
+color: #e27231;
+}
 
 /*NavBar end*/
 /* FOOTER */
 .custom-footer{
-    background-color: #F8E1C7;
-}
-.footer-icons i {
-  color: #000; 
-  transition: color 0.3s;
+    background-color: #ff884d;
 }
 
-.footer-icons i:hover {
-  color: #EE684C;
-}
 
 /* END FOOTER */
